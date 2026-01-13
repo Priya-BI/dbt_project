@@ -1,0 +1,55 @@
+[0m19:52:37.446230 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027625F4F150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027628879150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027625F402D0>]}
+
+
+============================== 19:52:37.508343 | 7f46ec4d-9aea-4a56-92a3-e47954773795 ==============================
+[0m19:52:37.508343 [info ] [MainThread]: Running with dbt=1.11.2
+[0m19:52:37.510346 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Priya\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m19:55:31.438340 [debug] [MainThread]: Starter project path: C:\dbt_tut\.venv\Lib\site-packages\dbt\include\starter_project
+[0m19:55:31.498444 [info ] [MainThread]: 
+Your new dbt project "dbt_tutorial" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:55:31.498444 [info ] [MainThread]: Setting up your profile.
+[0m19:55:44.505036 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m19:55:44.505036 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m19:55:44.505036 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:08:37.410686 [info ] [MainThread]: Profile dbt_tutorial written to C:\Users\Priya\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:08:37.410686 [debug] [MainThread]: Command `dbt init` succeeded at 20:08:37.410686 after 960.10 seconds
+[0m20:08:37.410686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002762972C910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027629720650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000276294BF190>]}
+[0m20:08:37.410686 [debug] [MainThread]: Flushing usage events
+[0m20:08:38.454798 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:11:39.258799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B727643890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B72ABBF6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B729D9EC90>]}
+
+
+============================== 20:11:39.265118 | 65c3a8d3-3aee-440a-bdfd-95fe53db3cd7 ==============================
+[0m20:11:39.265118 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:11:39.266670 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Priya\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m20:11:39.337891 [info ] [MainThread]: dbt version: 1.11.2
+[0m20:11:39.338889 [info ] [MainThread]: python version: 3.11.9
+[0m20:11:39.340107 [info ] [MainThread]: python path: C:\dbt_tut\.venv\Scripts\python.exe
+[0m20:11:39.341110 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m20:11:45.137040 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:11:45.138087 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:11:45.139118 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:11:51.730918 [info ] [MainThread]: Using profiles dir at C:\Users\Priya\.dbt
+[0m20:11:51.730918 [info ] [MainThread]: Using profiles.yml file at C:\Users\Priya\.dbt\profiles.yml
+[0m20:11:51.731996 [info ] [MainThread]: Using dbt_project.yml file at C:\dbt_tut\dbt_project.yml
+[0m20:11:51.733000 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m20:11:51.734109 [debug] [MainThread]: Command `dbt debug` failed at 20:11:51.734109 after 12.60 seconds
+[0m20:11:51.735116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B72AE7EC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B72AE7ED50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B72ABBEC90>]}
+[0m20:11:51.735116 [debug] [MainThread]: Flushing usage events
+[0m20:11:52.715137 [debug] [MainThread]: An error was encountered while trying to flush usage events

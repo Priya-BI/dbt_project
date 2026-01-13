@@ -1,0 +1,23 @@
+dbt_tutorial:
+  
+  outputs:
+    dev:
+      catalog: training2
+      host: adb-4472422858113033.13.azuredatabricks.net
+      http_path: /sql/1.0/warehouses/581add9cbf02e8df
+      schema: default
+      threads: 4
+      token: dapi74750a46c96f7825fb4ee861966d591b-2
+      type: databricks
+  target: dev
+#jaffle_shop:
+ # outputs:
+  #  dev:
+   #   auth_type: oauth
+    #  database: information_schema
+     # host: adb-4472422858113033.13.azuredatabricks.net
+      #http_path: /sql/1.0/warehouses/581add9cbf02e8df
+      #schema: training2
+      #threads: 16
+      #type: databricks
+  #target: dev
