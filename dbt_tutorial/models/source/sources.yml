@@ -16,3 +16,5 @@ sources:
         description: Customer dimension table
       - name: fact_sales
         description: Sales fact table
+      - name: items
+        description: Items table
