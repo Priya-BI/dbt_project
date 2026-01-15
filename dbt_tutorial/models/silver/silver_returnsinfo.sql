@@ -1,8 +1,9 @@
 WITH returns AS
 (
     SELECT
-        salesid,
+        sales_id,
         date_sk,
+        product_sk,
         returned_qty,
         refund_amount
     FROM {{ ref('bronze_returns') }}
@@ -27,17 +28,31 @@ products AS
         category,
         list_price
     FROM {{ ref('bronze_product') }}
-)
-
+),
+joined_returns AS
+(
 SELECT
-    returns.salesid,
-    returns.product_sk,
-    returns.returned_qty,
-    returns.refund_amount,
+    returns.sales_id,
+    returns.product_sk,  
     products.product_name,
     products.category,
-    products.list_price
+    products.list_price,
+    returns.returned_qty,
+    returns.refund_amount
     FROM
     returns
-    LEFT JOIN sales ON returns.salesid = sales.sales_id
+    LEFT JOIN sales ON returns.sales_id = sales.sales_id
     LEFT JOIN products ON returns.product_sk = products.product_sk
+    )
+
+SELECT
+    category,
+    product_sk,
+    sum(refund_amount) AS total_refunds
+FROM 
+    joined_returns
+GROUP BY
+    category,
+    product_sk
+ORDER BY
+    category DESC
