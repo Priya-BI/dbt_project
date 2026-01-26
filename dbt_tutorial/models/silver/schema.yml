@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: silver_salesinfo
+    description: "A table containing sales data at the silver level."
+    columns:
+        - name: category
+          description: "The category of the returned item."
+          data_type: string 
+        - name: gender
+          description: "Gender of the customer."
+          data_type: string
+        - name: total_sales
+          description: "Total sales amount by category and gender."
+          data_type: double

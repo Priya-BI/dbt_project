@@ -34,13 +34,13 @@ models:
     # Config indicated by + and applies to all files under models/example/
     bronze:
       +materialized: table
-      schema: bronze_dbt
+      +schema: bronze_dbt
     silver:
       +materialized: table 
-      schema: silver_dbt
+      +schema: silver_dbt
     gold:
       +materialized: table
-      schema: gold_dbt
+      +schema: gold_dbt
 seeds:
   dbt_tutorial:
       +schema: bronze_dbt
