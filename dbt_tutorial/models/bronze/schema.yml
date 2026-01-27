@@ -31,3 +31,140 @@ models:
       - name: signup_date
         description: "The date the customer signed up."
         data_type: date
+  - name: bronze_product
+    description: "A table containing product data at the bronze level."
+    columns:
+      - name: product_sk
+        description: "surrogate key for product table."
+        data_type: bigint
+      - name: product_code
+        description: "The unique identifier for each product."
+        data_type: string
+      - name: product_name
+        description: "The name of the product."
+        data_type: string
+      - name: category
+        description: "The category of the product."
+        data_type: string
+      - name: suplier_sk
+        description: "surrogate key for supplier table."
+        data_type: bigint
+      - name: list_price
+        description: "The price of the product."
+        data_type: double
+      - name: uom
+        description: "The unit of measurement for the product."
+        data_type: string 
+  - name: bronze_returns
+    description: "A table containing product data at the bronze level."
+    columns:
+      - name: sales_id  
+        description: "Sales id of sales."
+        data_type: bigint
+      - name: date_sk
+        description: "surrogate key for date table."
+        data_type: string
+      - name: store_sk
+        description: "surrogate key for store table."
+        data_type: bigint
+      - name: product_sk
+        description: "surrogate key for product table."
+        data_type: bigint
+      - name: return_qty
+        description: "quantity of product returned."
+        data_type: bigint
+      - name: return_reason
+        description: "reason for product return."
+        data_type: string
+      - name: refund_amount
+        description: "amount refunded for the return."
+        data_type: double     
+     
+  - name: bronze_sales
+    description: "A table containing sales data at the bronze level."
+    columns:
+      - name: sales_id
+        description: "sales id for sales table."
+        data_type: bigint
+        data_tests:
+          - unique
+          - not_null
+      - name: date_sk
+        description: "surrogate key for date table."
+        data_type: string
+      - name: store_sk
+        description: "surrogate key for store table."
+        data_type: bigint
+      - name: product_sk
+        description: "surrogate key for product table."
+        data_type: bigint
+      - name: customer_sk
+        description: "surrogate key for customer table."
+        data_type: bigint
+      - name: promotion_sk
+        description: "surrogate key for promotion table."
+        data_type: bigint
+      - name: quantity
+        description: "quantity of product."
+        data_type: bigint
+      - name: unit_price
+        description: "unit price of product."
+        data_type: double
+      - name: gross_amount
+        description: "gross amount of sales."
+        data_type: double
+        data_tests:
+          - generic_non_negative:              
+              arguments:
+                column_name: gross_amount
+      - name: discount_amount
+        description: "discount amount on sales."
+        data_type: double
+      - name: net_amount  
+        description: "net amount of sales."
+        data_type: double
+      - name: payment_method  
+        description: "payment method used in sales."
+        data_type: string
+  - name: bronze_store
+    description: "A table containing store data at the bronze level."
+    columns:
+      - name: store_sk
+        description: "surrogate key for store table."
+        data_type: bigint
+        data_tests:
+          - unique
+          - not_null
+      - name: store_code
+        description: "The unique identifier for each store."
+        data_type: string
+      - name: store_name
+        description: "The name of the store."
+        data_type: string
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['MegaMart Manhattan','MegaMart Brooklyn', 'MegaMart Austin', 'MegaMart San Jose',
+                       'MegaMart Toronto']
+      - name: city
+        description: "The city where the store is located."      
+        data_type: string
+      - name: state_province  
+        description: "The state or province where the store is located."
+        data_type: string
+      - name: region
+        description: "The region where the store is located."      
+        data_type: string
+      - name: country 
+        description: "The country where the store is located."
+        data_type: string
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['USA', 'Canada']
+      - name: open_date 
+        description: "The date the store was opened."
+        data_type: date
+      - name: sq_ft
+        description: "The square footage of the store."
+        data_type: bigint
