@@ -1,0 +1,31 @@
+ersion: 2
+
+models:
+  - name: source_gold_items
+    description: "A table containing item data at the gold level."
+    columns:
+      - name: id    
+        description: "Primary key for item table."
+        data_type: int
+      - name: name
+        description: "Name of the item."
+        data_type: string
+      - name: updatedate
+        description: "The date when the item was last updated."
+        data_type: date
+      - name: deduplication_id
+        description: "A unique identifier for deduplication purposes."
+        data_type: string
+
+  - name: gold_products
+    description: "A table containing product data at the gold level."
+    columns:
+      - name: category
+        description: "Category of the product."
+        data_type: string
+      - name: total_sales
+        description: "Total sales amount by category."
+        data_type: double
+      - name: total_refunds
+        description: "Total refunds amount by category."
+        data_type: double
