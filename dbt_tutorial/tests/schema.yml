@@ -1,0 +1,14 @@
+version: 2
+
+macros:
+  - name: test_generic_non_negative
+    description: >
+      A generic dbt test that validates a column contains only non-negative values.
+      The test fails if any value in the column is less than zero.
+
+    arguments:
+      - name: model
+        description: The model being tested
+
+      - name: column_name
+        description: The column on which the non-negative check is applied
