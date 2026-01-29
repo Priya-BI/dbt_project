@@ -7,7 +7,6 @@ Medallion Architecture on Databricks with CI/CD
 - Apache Spark SQL
 - Git & GitHub
 - GitHub Actions (CI/CD)
-- Medallion Architecture
 
 ## 📌 Project Overview ##
 
@@ -51,4 +50,5 @@ dbt Docs is used to auto-generate:
 - Test visibility
 - End-to-end lineage graph
 Documentation is derived directly from code to ensure it remains accurate and up to date
+
 
